@@ -36,7 +36,7 @@ nnoremap <C-I> :action Forward<CR>
 nmap <C-,> :action KJumpAction<cr>
 nmap <leader>w :action KJumpAction.Word0<cr>
 nmap <C-;> :action KJumpAction.Word0<cr>
-nmap <leader>l :action KJumpAction.Line<cr>
+nmap <leader>ll :action KJumpAction.Line<cr>
 
 " built in search looks better
 nnoremap / :action Find<CR>
@@ -45,9 +45,9 @@ nnoremap <Space>/ /
 
 nnoremap <Space>c :action ShowPopupMenu<CR>
 nnoremap <Space>m :action FileStructurePopup<CR>
-nnoremap <Space>gf :action GotoFile<CR>
-nnoremap <Space>gc :action GotoClass<CR>
-nnoremap <Space>ga :action GotoAction<CR>
+nnoremap <Space>lf :action GotoFile<CR>
+nnoremap <Space>lc :action GotoClass<CR>
+nnoremap <Space>la :action GotoAction<CR>
 nnoremap <Space>gg :action Annotate<CR>
 nnoremap <Space>f :action FindInPath<CR>
 nnoremap <Space><Space>e :action SelectInProjectView<CR>
