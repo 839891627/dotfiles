@@ -47,11 +47,11 @@ nnoremap <Space>m :action ShowPopupMenu<CR>
 nnoremap <Space>gc :action GotoClass<CR>
 nnoremap <Space>ga :action GotoAction<CR>
 nnoremap <Space>c :action FileStructurePopup<CR>
-nnoremap <Space>gn :action GotoFile<CR>
+nnoremap <Space>gf :action GotoFile<CR>
 nnoremap <Space>f :action FindInPath<CR>
 nnoremap <Space><Space>e :action SelectInProjectView<CR>
 nnoremap <Space>e :action RecentFiles<CR>
-nnoremap <Space>g :action Annotate<CR>
+nnoremap <Space>gg :action Annotate<CR>
 nnoremap <Space>u :action FindUsages<CR>
 nnoremap <Space>t :action Refactorings.QuickListPopupAction<CR>
 nnoremap <Space>r :action RenameElement<CR>
