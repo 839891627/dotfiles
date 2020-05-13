@@ -54,6 +54,8 @@ nnoremap <Space><Space>g :action Annotate<CR>
 nnoremap <Space><Space>e :action SelectInProjectView<CR>
 nnoremap <Space><Space>f :action FindInPath<CR>
 vnoremap <Space><Space>f :action FindInPath<CR>
+vnoremap <Space><Space>s :action SurroundWith<CR>
+nnoremap <Space><Space>s :action SurroundWith<CR>
 nnoremap <Space>e :action RecentFiles<CR>
 nnoremap <Space>u :action FindUsages<CR>
 nnoremap <Space>t :action Refactorings.QuickListPopupAction<CR>
