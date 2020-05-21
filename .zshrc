@@ -120,6 +120,7 @@ alias dr='docker-compose r'
 alias dps='docker-compose ps'
 alias ddown='docker-compose down'
 alias dr='docker-compose restart'
+alias dc='docker-compose exec'
 
 
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

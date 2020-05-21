@@ -24,7 +24,6 @@ inoremap <C-k> <Up>
 nnoremap zh :action PreviousTab<CR>
 nnoremap zl :action NextTab<CR>
 nnoremap ,q :action CloseAllEditors<CR> 
-nnoremap <tab> :action NextSplitter<CR>
 
 nnoremap <C-O> :action Back<CR>
 nnoremap <C-I> :action Forward<CR>
@@ -67,6 +66,7 @@ nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-h> <C-W>h
 nnoremap <C-l> <C-W>l
+nnoremap <tab> :action NextSplitter<CR>
 
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
