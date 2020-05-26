@@ -107,14 +107,40 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+fun php(){
+    p=`pwd`
+    i=$p[(I)docker]
+    if [ $i -gt 0 ]; then
+        b=${p:t}
+        docker exec -it -w /var/www/$b php71 php
+    else
+        echo 3
+        docker exec -it  php71 php
+    fi
+}
+fun php73(){
+    p=`pwd`
+    i=$p[(I)docker]
+    if [ $i -gt 0 ]; then
+        b=${p:t}
+        docker exec -it -w /var/www/$b php71 php
+    else
+        echo 3
+        docker exec -it  php71 php
+    fi
+}
+
+
+
+
 alias px=proxychains4
 alias m=tldr
 alias dup='docker-compose up'
-alias php='a=`pwd`;b=${a:t};docker exec -it -w /var/www/$b php71 php'
+#alias php='a=`pwd`;b=${a:t};docker exec -it -w /var/www/$b php71 php'
 alias composer='a=`pwd`;b=${a:t};docker exec -it -w /var/www/$b php71 composer'
 alias node='a=`pwd`;b=${a:t};docker exec -it -w /var/www/$b php71 node'
 alias npm='a=`pwd`;b=${a:t};docker exec -it -w /var/www/$b php71 npm'
-alias php73='a=`pwd`;b=${a:t};docker exec -it -w /var/www/$b php73 php'
+#alias php73='a=`pwd`;b=${a:t};docker exec -it -w /var/www/$b php73 php'
 alias dup='docker-compose up'
 alias dr='docker-compose r'
 alias dps='docker-compose ps'
@@ -124,3 +150,4 @@ alias dc='docker-compose exec'
 
 
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="/usr/local/opt/bison/bin:$PATH"
