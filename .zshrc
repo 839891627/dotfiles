@@ -114,7 +114,6 @@ fun php(){
         b=${p:t}
         docker exec -it -w /var/www/$b php71 php
     else
-        echo 3
         docker exec -it  php71 php
     fi
 }
@@ -125,7 +124,6 @@ fun php73(){
         b=${p:t}
         docker exec -it -w /var/www/$b php71 php
     else
-        echo 3
         docker exec -it  php71 php
     fi
 }
