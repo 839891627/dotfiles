@@ -112,9 +112,9 @@ fun php(){
     i=$p[(I)docker]
     if [ $i -gt 0 ]; then
         b=${p:t}
-        docker exec -it -w /var/www/$b php71 php
+        docker exec -it -w /var/www/$b php71 php "$@"
     else
-        docker exec -it  php71 php
+        docker exec -it  php71 php "$@"
     fi
 }
 fun php73(){
@@ -122,9 +122,9 @@ fun php73(){
     i=$p[(I)docker]
     if [ $i -gt 0 ]; then
         b=${p:t}
-        docker exec -it -w /var/www/$b php71 php
+        docker exec -it -w /var/www/$b php73 php "$@"
     else
-        docker exec -it  php71 php
+        docker exec -it  php73 php "$@"
     fi
 }
 

@@ -35,12 +35,7 @@ nnoremap <C-I> :action Forward<CR>
 nmap <C-,> :action KJumpAction<cr>
 nmap <leader>w :action KJumpAction.Word0<cr>
 nmap <C-;> :action KJumpAction.Word0<cr>
-nmap <leader>ll :acion KJumpAction.Line<cr>
-
-" built in search looks better
-nnoremap / :action Find<CR>
-" but preserve ideavim search
-nnoremap <Space>/ /
+nmap <leader>l :action KJumpAction.Line<cr>
 
 nnoremap <Space>c :action ShowPopupMenu<CR>
 nnoremap <Space>m :action FileStructurePopup<CR>
@@ -60,6 +55,8 @@ nnoremap <Space>u :action FindUsages<CR>
 nnoremap <Space>t :action Refactorings.QuickListPopupAction<CR>
 nnoremap <Space>r :action RenameElement<CR>
 nnoremap <Space>o :action OpenEditorInOppositeTabGroup<CR>
+nnoremap mn :action ShowBookmarks<CR>
+nnoremap mm :action ToggleBookmark<CR>
 
 " Window operation
 nnoremap <C-j> <C-W>j
