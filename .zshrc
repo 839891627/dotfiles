@@ -109,7 +109,7 @@ source $ZSH/oh-my-zsh.sh
 #
 fun php(){
     p=`pwd`
-    i=$p[(I)docker]
+    i=$p[(I)Docker]
     if [ $i -gt 0 ]; then
         b=${p:t}
         docker exec -it -w /var/www/$b php71 php "$@"
@@ -119,7 +119,7 @@ fun php(){
 }
 fun php73(){
     p=`pwd`
-    i=$p[(I)docker]
+    i=$p[(I)Docker]
     if [ $i -gt 0 ]; then
         b=${p:t}
         docker exec -it -w /var/www/$b php73 php "$@"
@@ -128,6 +128,9 @@ fun php73(){
     fi
 }
 
+fun dp(){
+docker exec -it php71 bash
+}
 
 
 
@@ -149,3 +152,10 @@ alias dc='docker-compose exec'
 
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="/usr/local/opt/bison/bin:$PATH"
+
+# HomeBrew
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+# HomeBrew END
+

@@ -6,7 +6,7 @@ set encoding=utf-8
 set nu
 set relativenumber
 set incsearch
-set ignorecase
+"set ignorecase
 " set ic
 set hlsearch
 set nowrapscan             
@@ -20,6 +20,8 @@ inoremap jk <esc>
 nnoremap Y yg_
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
+imap <M-l> <Esc>A
+imap <M-h> <Esc>I
 
 nnoremap zh :action PreviousTab<CR>
 nnoremap zl :action NextTab<CR>
@@ -37,20 +39,16 @@ nmap <leader>w :action KJumpAction.Word0<cr>
 nmap <C-;> :action KJumpAction.Word0<cr>
 nmap <leader>l :action KJumpAction.Line<cr>
 
-nnoremap <Space>c :action ShowPopupMenu<CR>
-nnoremap <Space>m :action FileStructurePopup<CR>
-nnoremap <Space><Space>n :action GotoFile<CR>
-nnoremap <Space><Space>c :action GotoClass<CR>
-vnoremap <Space><Space>n :action GotoFile<CR>
-vnoremap <Space><Space>c :action GotoClass<CR>
-nnoremap <Space><Space>a :action GotoAction<CR>
-nnoremap <Space><Space>g :action Annotate<CR>
+nnoremap <Space>a :action GotoAction<CR>
+" nnoremap <Space>c :action GotoClass<CR>
+nnoremap <Space>e :action RecentChangedFiles<CR>
 nnoremap <Space><Space>e :action SelectInProjectView<CR>
-nnoremap <Space><Space>f :action FindInPath<CR>
-vnoremap <Space><Space>f :action FindInPath<CR>
-vnoremap <Space><Space>s :action SurroundWith<CR>
-nnoremap <Space><Space>s :action SurroundWith<CR>
-nnoremap <Space>e :action RecentFiles<CR>
+nnoremap <Space>f :action FindInPath<CR>
+vnoremap <Space>f :action FindInPath<CR>
+nnoremap <Space>g :action Annotate<CR>
+nnoremap <Space>m :action FileStructurePopup<CR>
+nnoremap <Space>s :action SurroundWith<CR>
+vnoremap <Space>s :action SurroundWith<CR>
 nnoremap <Space>u :action FindUsages<CR>
 nnoremap <Space>t :action Refactorings.QuickListPopupAction<CR>
 nnoremap <Space>r :action RenameElement<CR>
