@@ -20,6 +20,8 @@ inoremap jk <esc>
 nnoremap Y yg_
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
 imap <M-l> <Esc>A
 imap <M-h> <Esc>I
 
