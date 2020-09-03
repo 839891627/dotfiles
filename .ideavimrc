@@ -1,6 +1,7 @@
 let mapleader=' '
 set surround
 set easymotion
+set highlightedyank
 map <Leader> <Plug>(easymotion-prefix)
 
 set encoding=utf-8
@@ -11,7 +12,6 @@ set hlsearch
 set nowrapscan
 set showmatch
 nnoremap 0 ^
-nnoremap ,z :wq<CR>
 nnoremap <esc> :nohl<cr>
 nnoremap <esc> :nohls<cr>
 inoremap zz <esc>zz
@@ -26,18 +26,22 @@ nmap <M-I> :action GotoImplementation<CR>
 nmap <M-U> :action GotoSuperMethod<CR>
 nnoremap <C-O> :action Back<CR>
 nnoremap <C-I> :action Forward<CR>
-nnoremap <Space>a :action GotoAction<CR>
+nnoremap <Space>a :action GotoSymbol<CR>
 
 " 窗口
 nnoremap <Space><Space>e :action SelectInProjectView<CR>
 nnoremap <Space>e :action RecentChangedFiles<CR>
 nnoremap <Space>m :action FileStructurePopup<CR>
 nnoremap <Space>o :action OpenEditorInOppositeTabGroup<CR>
+nnoremap ,g :action ToggleZenMode<CR>
+
+nnoremap ,z :wq<CR>
+nnoremap ,q :action CloseAllEditors<CR>
+
 
 " tab 切换
 nnoremap zh :action PreviousTab<CR>
 nnoremap zl :action NextTab<CR>
-nnoremap ,q :action CloseAllEditors<CR>
 nnoremap <tab> :action NextSplitter<CR>
 
 " 重构
@@ -45,7 +49,10 @@ nnoremap <Space>s :action SurroundWith<CR>
 vnoremap <Space>s :action SurroundWith<CR>
 nnoremap <Space>u :action FindUsages<CR>
 nnoremap <Space>t :action Refactorings.QuickListPopupAction<CR>
+vnoremap <Space>t :action Refactorings.QuickListPopupAction<CR>
 nnoremap <Space>r :action RenameElement<CR>
+nnoremap <Space>c :action ShowPopupMenu<CR>
+vnoremap <Space>c :action ShowPopupMenu<CR>
 
 " 其他
 nnoremap mn :action ShowBookmarks<CR>
