@@ -23,8 +23,7 @@ nnoremap Y yg_
 set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
-nnoremap <Space><Space> :action GotoNextError<CR>
-set scrolloff=3
+nnoremap <Space>n :action GotoNextError<CR>
 
 " phpstorm  快捷键
 " 跳转
@@ -47,7 +46,7 @@ nnoremap ,g :action ToggleZenMode<CR>
 
 nnoremap ,z :wq<CR>
 nnoremap ,q :action CloseAllEditors<CR>
-nnoremap ,x :action CloseAllEditorsButActive<CR>
+nnoremap <Space>x :action CloseAllEditorsButActive<CR>
 
 
 " tab 切换
@@ -81,7 +80,7 @@ vnoremap <Space>c :action ShowPopupMenu<CR>
 nnoremap mn :action ShowBookmarks<CR>
 nnoremap mm :action ToggleBookmark<CR>
 nnoremap <Space>g :action Annotate<CR>
-nnoremap <Space>z :action TogglePresentationMode<CR>
+nnoremap <Space>z :action ToggleFullScreen<CR>
 
 
 " Window operation
@@ -95,6 +94,10 @@ inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
+nmap <C-j> <Down>
+nmap <C-k> <Up>
+nmap <C-h> <Left>
+nmap <C-l> <Right>
 imap <M-l> <Esc>A
 imap <M-h> <Esc>I
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
