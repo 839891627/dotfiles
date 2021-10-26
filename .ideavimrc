@@ -4,10 +4,10 @@ set easymotion
 set highlightedyank
 map <Leader> <Plug>(easymotion-prefix)
 
+set ideamarks " Sync marks and idea bookmarks
 set showmode
 set encoding=utf-8
 set nu
-set so=5
 set relativenumber
 set incsearch
 set hlsearch
@@ -109,3 +109,5 @@ nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
 nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
 
 set lazyredraw
+
+set keep-english-in-normal-and-restore-in-insert
