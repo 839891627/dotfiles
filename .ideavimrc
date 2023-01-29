@@ -29,6 +29,11 @@ nnoremap <Space>n :action GotoNextError<CR>
 " 跳转
 "imap <M-I> :action GotoImplementation<CR>
 " 新版支持这种配置
+imap <D-I> <Action>(GotoImplementation)
+imap <D-U> :action GotoSuperMethod<CR>
+nmap <D-I> :action GotoImplementation<CR>
+nmap <D-U> :action GotoSuperMethod<CR>
+" <M- 是非 mac 系统的快捷键， <D- 是仅 mac 系统的快捷键
 imap <M-I> <Action>(GotoImplementation)
 imap <M-U> :action GotoSuperMethod<CR>
 nmap <M-I> :action GotoImplementation<CR>
@@ -80,6 +85,8 @@ vnoremap <Space>c :action ShowPopupMenu<CR>
 nnoremap mn :action ShowBookmarks<CR>
 nnoremap mm :action ToggleBookmark<CR>
 nnoremap <Space>g :action Annotate<CR>
+nnoremap <Space><Space>b :action Git.Branches<CR>
+nnoremap <Space><Space>g :action Vcs.Operations.Popup<CR>
 nnoremap <Space>z :action ToggleFullScreen<CR>
 
 
@@ -100,9 +107,12 @@ nmap <C-h> <Left>
 nmap <C-l> <Right>
 imap <M-l> <Esc>A
 imap <M-h> <Esc>I
-" Move a line of text using ALT+[jk] or Command+[jk] on mac
-nmap <M-j> mz:m+<cr>`z
-nmap <M-k> mz:m-2<cr>`z
+imap <D-l> <Esc>A
+imap <D-h> <Esc>I
+nmap <M-h> 0
+nmap <M-l> g_
+nmap <D-h> 0
+nmap <D-l> g_
 
 " 在当前行前/后快速插入空行
 nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
