@@ -20,6 +20,8 @@ inoremap zz <esc>zz
 inoremap jk <esc>
 nnoremap Y yg_
 
+set quickscope
+
 set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
@@ -89,6 +91,7 @@ nnoremap <Space><Space>b :action Git.Branches<CR>
 nnoremap <Space><Space>g :action Vcs.Operations.Popup<CR>
 nnoremap <Space>z :action ToggleFullScreen<CR>
 
+nnoremap <Space>j :AddQuotesAndMerge<CR>
 
 " Window operation
 nnoremap <C-j> <C-W>j
@@ -121,3 +124,24 @@ nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
 set lazyredraw
 
 set keep-english-in-normal-and-restore-in-insert
+
+function! AddQuotes()
+    %s/^/'/g
+    %s/$/',/g
+endfunction
+
+command! AddQuotes call AddQuotes()
+
+
+function! AddQuotesAndMerge()
+    %s/^/'/g
+    %s/$/', /g
+    %join
+    normal I(
+    normal $i)
+    %s/,)/)/
+endfunction
+command! AddQuotesAndMerge call AddQuotesAndMerge()
+
+
+vnoremap <Space>e :action MarsCode.ExplainCode.Action<CR>
